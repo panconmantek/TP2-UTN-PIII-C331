@@ -2,23 +2,23 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Obteniendo todas las películas");
+  res.send("Obteniendo todos los directores");
 });
 
 router.post("/", (req, res) => {
-  res.send("Creando una nueva película");
+  res.send("Creando un nuevo director");
 });
 
 router.get("/:id", (req, res) => {
-  res.send(`Obteniendo la película con ID: ${req.params.id}`);
+  res.send(`Obteniendo director con ID: ${req.params.id}`);
 });
 
 router.put("/:id", (req, res) => {
-  res.send(`Editando la película con ID: ${req.params.id}`);
+  res.send(`Editando director con ID: ${req.params.id}`);
 });
 
 router.delete("/:id", (req, res) => {
-  res.send(`Borrando la película con ID: ${req.params.id}`);
+  res.send(`Borrando director con ID: ${req.params.id}`);
 });
 
 module.exports = router;

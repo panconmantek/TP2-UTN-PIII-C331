@@ -1,16 +1,19 @@
 const express = require("express");
 const morgan = require("morgan");
 
-const router = require("../routes/movies.router");
+const moviesRouter = require("../routes/movies.router");
+const directorsRouter = require("../routes/directors.router");
 
 const app = express();
 
 app.use(morgan("dev"));
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
+app.use("/movies", moviesRouter);
+app.use("/directors", directorsRouter);
+
+app.use((req, res, next) => {
+  res.status(404).send("Ruta no encontrada");
 });
-
-app.use("/api/v1", router);
 
 module.exports = app;
