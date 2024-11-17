@@ -1,24 +1,15 @@
 const express = require("express");
 const router = express.Router();
+const controller = require("../controllers/movies.controller");
 
-router.get("/", (req, res) => {
-  res.send("Obteniendo todas las películas");
-});
+router.get("/", controller.read);
 
-router.post("/", (req, res) => {
-  res.send("Creando una nueva película");
-});
+router.get("/:id", controller.readOne);
 
-router.get("/:id", (req, res) => {
-  res.send(`Obteniendo la película con ID: ${req.params.id}`);
-});
+router.post("/", controller.create);
 
-router.put("/:id", (req, res) => {
-  res.send(`Editando la película con ID: ${req.params.id}`);
-});
+router.put("/:id", controller.put);
 
-router.delete("/:id", (req, res) => {
-  res.send(`Borrando la película con ID: ${req.params.id}`);
-});
+router.delete("/:id", controller.remove);
 
 module.exports = router;
