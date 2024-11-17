@@ -5,14 +5,37 @@ const errorHandler = require("../helper/errorHandler");
 module.exports = {
   read: async (req, res) => {
     try {
+      const { page = 1, limit = 10, sort = "ASC", type, status } = req.query;
+      const pageNumber = parseInt(page, 10);
+      const pageLimit = parseInt(limit, 10);
+
+      const offset = (pageNumber - 1) * pageLimit;
+
+      const order = [
+        ["createdAt", sort.toUpperCase() === "DESC" ? "DESC" : "ASC"],
+      ];
+
+      const where = {};
+      if (type) {
+        where.genre = type;
+      }
+      if (status) {
+        where.status = status;
+      }
+
       const items = await movies.findAll({
+        where,
         include: [
           {
             model: directors,
             attributes: ["id", "name", "surname"],
           },
         ],
+        limit: pageLimit,
+        offset: offset,
+        order: order,
       });
+
       res.json(items);
     } catch (error) {
       const image = await errorHandler.getHttpCatImage(500);
@@ -20,7 +43,10 @@ module.exports = {
         res.set("Content-Type", "image/jpeg");
         return res.status(500).send(image);
       } else {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({
+          message: "An error occurred while reading all movies",
+          error: error.message,
+        });
       }
     }
   },
@@ -49,7 +75,10 @@ module.exports = {
         res.set("Content-Type", "image/jpeg");
         return res.status(500).send(image);
       } else {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({
+          message: "An error occurred while reading the movie",
+          error: error.message,
+        });
       }
     }
   },
@@ -111,7 +140,10 @@ module.exports = {
         res.set("Content-Type", "image/jpeg");
         return res.status(500).send(image);
       } else {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({
+          message: "An error occurred while updating the movie",
+          error: error.message,
+        });
       }
     }
   },
@@ -142,13 +174,29 @@ module.exports = {
         res.set("Content-Type", "image/jpeg");
         return res.status(500).send(image);
       } else {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({
+          message: "An error occurred while removing the movie",
+          error: error.message,
+        });
       }
     }
   },
 
   create: async (req, res) => {
     const { title, genre, status, released, directorId } = req.body;
+
+    if (!title || !genre || !status || !released || !directorId) {
+      const image = await errorHandler.getHttpCatImage(400);
+      if (image) {
+        res.set("Content-Type", "image/jpeg");
+        return res.status(400).send(image);
+      } else {
+        return res.status(400).json({
+          message:
+            "All fields (title, genre, status, released, directorId) are required",
+        });
+      }
+    }
 
     try {
       const movie = await movies.create({ title, genre, status, released });
@@ -166,16 +214,21 @@ module.exports = {
 
       await movie.addDirector(director);
 
-      res
-        .status(201)
-        .json({ message: "Movie created and associated with director", movie });
+      res.status(201).json({
+        message: "Movie created and associated with director successfully",
+        movie,
+        director,
+      });
     } catch (error) {
       const image = await errorHandler.getHttpCatImage(500);
       if (image) {
         res.set("Content-Type", "image/jpeg");
         return res.status(500).send(image);
       } else {
-        res.status(500).json({ message: error.message });
+        res.status(500).json({
+          message: "An error occurred while creating the movie",
+          error: error.message,
+        });
       }
     }
   },
