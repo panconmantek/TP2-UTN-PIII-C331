@@ -1,24 +1,15 @@
 const express = require("express");
 const router = express.Router();
+const controller = require("../controllers/directors.controller");
 
-router.get("/", (req, res) => {
-  res.send("Obteniendo todos los directores");
-});
+router.get("/", controller.read);
 
-router.post("/", (req, res) => {
-  res.send("Creando un nuevo director");
-});
+router.get("/:id", controller.readOne);
 
-router.get("/:id", (req, res) => {
-  res.send(`Obteniendo director con ID: ${req.params.id}`);
-});
+router.post("/", controller.create);
 
-router.put("/:id", (req, res) => {
-  res.send(`Editando director con ID: ${req.params.id}`);
-});
+router.put("/:id", controller.put);
 
-router.delete("/:id", (req, res) => {
-  res.send(`Borrando director con ID: ${req.params.id}`);
-});
+router.delete("/:id", controller.remove);
 
 module.exports = router;
