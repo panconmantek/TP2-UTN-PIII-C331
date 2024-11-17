@@ -5,14 +5,37 @@ const errorHandler = require("../helper/errorHandler");
 module.exports = {
   read: async (req, res) => {
     try {
+      const { page = 1, limit = 10, sort = "ASC", type, status } = req.query;
+      const pageNumber = parseInt(page, 10);
+      const pageLimit = parseInt(limit, 10);
+
+      const offset = (pageNumber - 1) * pageLimit;
+
+      const order = [
+        ["createdAt", sort.toUpperCase() === "DESC" ? "DESC" : "ASC"],
+      ];
+
+      const where = {};
+      if (type) {
+        where.genre = type;
+      }
+      if (status) {
+        where.status = status;
+      }
+
       const items = await movies.findAll({
+        where,
         include: [
           {
             model: directors,
             attributes: ["id", "name", "surname"],
           },
         ],
+        limit: pageLimit,
+        offset: offset,
+        order: order,
       });
+
       res.json(items);
     } catch (error) {
       const image = await errorHandler.getHttpCatImage(500);

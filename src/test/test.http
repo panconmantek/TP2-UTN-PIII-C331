@@ -2,6 +2,10 @@
 GET http://localhost:4004/movies
 Content-Type: application/json
 
+### Obtener todas las peliculas con query params
+GET http://localhost:4004/movies?page=2&limit=5&sort=DESC&type=action&status=active
+Content-Type: application/json
+
 #### Obtener 1 película por ID
 GET http://localhost:4004/movies/15
 Content-Type: application/json
