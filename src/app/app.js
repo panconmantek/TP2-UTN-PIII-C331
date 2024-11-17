@@ -27,7 +27,7 @@ const directorsRouter = require("../routes/directors.router");
 
 const app = express();
 
-app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(morgan("dev"));
 app.use(express.json());
