@@ -70,3 +70,7 @@ Content-Type: application/json
 DELETE http://localhost:4004/directors/12
 Content-Type: application/json
 
+### Obtener documentacion
+GET http://localhost:4004/api-doc
+Content-Type: application/json
+

@@ -2,188 +2,66 @@
 <br/>
 <br/>
 
-# Trabajo Práctico Parte 2 — Node.js Express
+# Trabajo Práctico Parte 2 — API películas
 
-## Objetivo
+API REST desarrollada con Node.js, Express y Sequelize para gestionar películas y directores, con una relación muchos a muchos (N:N) entre ambas entidades. Proporciona funcionalidades CRUD completas para ambas entidades.
 
-El objetivo de este trabajo práctico es que los estudiantes desarrollen una API utilizando Node.js, Express, MySQL y Sequelize, demostrando sus conocimientos en el manejo del backend, estructura de proyectos y operaciones CRUD.
 
-Se valorará la organización del código, el uso de buenas prácticas y la implementación de funcionalidades adicionales especificadas.
-<br/>
-<br/>
+## Features
 
-## Requisitos
+- Crear, leer, actualizar y eliminar (CRUD) películas y directores.
+- Gestionar la relación entre películas y directores.
+- Proporcionar paginación, ordenación y filtrado en las rutas de consulta para películas.
+- Documentación Swagger disponible para explorar y probar la API.
 
-### **Stack Tecnológico Obligatorio**
 
-- Node.js
-- Express.js
-- MySQL
-- Sequelize ORM
+## Inicializar base de datos
 
-**Opcional:** Puede incluir otras herramientas y librerías (como Dotenv, Postman para probar la API, etc.).
-<br/>
-<br/>
+En la carpeta ./test podemos encontrar el archivo mysql.md con un script para crear esquema, tablas y popular las tablas. Además, en la misma carpeta, hay 3 archivos json con datos de ejemplo. 
+## Run Locally
+Se recomienda instalar la extensión REST Client en tu editor de código (como Visual Studio Code)
 
-## Desarrollo del trabajo práctico
+Clonar el proyecto
 
-- Se deberá clonar o "forkear" este repositorio para poder modificarlo y completarlo con la resolución del proyecto.
-- Una vez que su código esté listo, suba el código a un repositorio público propio y envíenos el enlace a dicho repositorio para que lo revisemos.
-  <br/>
-  <br/>
+```bash
+  git clone https://github.com/panconmantek/TP2-UTN-PIII-C331.git
+```
 
-## Trabajo Práctico
+Ir a la carpeta donde tenemos ubicado el proyecto
 
-**Crear una API temática libre**
+```bash
+  cd TP2-UTN-PIII-C331
+```
 
-Elija un tema para su API.
-Ejemplo: una biblioteca digital, gestión de películas, catálogo de productos, etc.
+Instalar dependencias
 
-<br/>
+```bash
+  npm install
+```
 
-**Estructura de Carpetas**
+Iniciar el servidor 
 
-Organice el proyecto respetando esta estructura básica:
+```bash
+  npm run start
+```
 
-src/<br/>
-├── controllers/<br/>
-├── models/<br/>
-├── routes/<br/>
-├── data/<br/>
-└── app.js<br/>
 
-## Detalles
+## Casos de uso & ejempos
 
-**Base de Datos**
+### Rest Client
+En la carpeta ./test, hay un archivo test.http con ejemplos de solicitudes HTTP. Para probar estos ejemplos, se recomienda instalar la extensión REST Client en tu editor de código (como Visual Studio Code).
 
-Se debe realizar la conexión con una base de datos **MySQL**.
+### Swagger
+La api cuenta con soporte para documentación con swagger, siento la ruta /api-doc.
 
-<br/>
-
-**Modelos**
-
-Necesitará construir los siguientes Modelos:
-
-<br/>
-
-- Un modelo que represente una entidad principal de su temática **Minimo 6 propiedades**
-  <br/>
-
-  > Deberá incluir lo siguiente:
-  >
-  > - `id` (autoincremental)
-  > - `createdAt` (fecha de creación, automática)
-  > - `updatedAt` (fecha de actualización, automática)
-  > - `type/categorie` (campo tipo o categoría, personalizado)
-  > - `status` (mínimo 2 opciones: `active`, `inactive`)
-  > - 1 propiedad adicional (de acuerdo al tema elegido).
-
-<br/>
-<br/>
-
-- Un modelo para manejar autores **Minimo 5 propiedades**
-  <br/>
-
-  > Deberá incluir lo siguiente:
-  >
-  > - `id` (autoincremental)
-  > - `createdAt` (fecha de creación, automática)
-  > - `updatedAt` (fecha de actualización, automática)
-  > - `name` (nombre del autor)
-  > - `surname` (apellido del autor)
-
-<br/>
-<br/>
-
-**Rutas y Controladores**
-
-Necesitará construir las siguientes Rutas y Controladores:
-
-- Rutas para el Modelo Personalizado **Minimo 5 rutas**
-  <br/>
-
-  > Deberá incluir lo siguiente:
-  >
-  > - Crear un registro
-  > - Actualizar por ID
-  > - Leer todos los registros
-  > - Leer un registro por ID
-  > - Eliminar un registro por ID
-
-<br/>
-<br/>
-
-- Rutas para el Modelo Autor **Minimo 4 rutas**
-  <br/>
-
-  > Deberá incluir lo siguiente:
-  >
-  > - Crear un autor
-  > - Leer todos los autores
-  > - Leer un autor por ID
-  > - Eliminar un autor por ID
-
-<br/>
-<br/>
-
-## Opcionales
-
-**Query Params**
-
-Incluya las siguientes funcionalidades adicionales en las rutas de **"Leer todos los registros"** para el modelo personalizado:
-
-1. **Paginado**
-
-   - Permita la paginación con parámetros `page` y `limit`.
-
-2. **Ordenado por Fecha de Creación**
-
-   - Soporte para ordenar por `createdAt` de forma ascendente (`ASC`) o descendente (`DESC`) mediante un parámetro `sort`.
-
-3. **Filtrado por `type/categorie`**
-
-   - Permita filtrar los registros según el valor del campo `type/categorie` utilizando un parámetro `type`.
-
-4. **Filtrado por `status`**
-   - Permita filtrar los registros según el estado (`active`, `inactive`) utilizando un parámetro `status`.
-
-El resultado final deberia verse como: <br/>
-`GET /modeloPersonalizado?page=2&limit=5&sort=DESC&type=category1&status=active`
-<br/>
-<br/>
-
-**Relación Autor-Modelo Personalizado (1:N)**
-
-1. Al crear un registro en el modelo personalizado, asócielo a un autor existente mediante su `idAutor`.
-
-<br/>
-<br/>
-
-## **Entrega**
-
-- Suba su código a un repositorio público en GitHub.
-- Incluya un archivo `README.md` con:
-  - Descripción breve de la API.
-  - Instrucciones para correr el proyecto localmente.
-  - Ejemplos de endpoints y cómo probarlos.
-- Archivos de ejemplos(seed) en formato json de cada modelo, para cargar la DDBB
-
-<br/>
-<br/>
-
-## **Comentarios Finales**
-
-Un dicho común en el desarrollo es:
-
-> "An API is just as good as its documentation"
->
-> — Common saying in backend development
-
-Por este motivo, vamos a valorar mucho este aspecto. Siéntase libre de utilizar librerías como **Swagger** para generar su documentación.
-
-<br/>
-<br/>
-
-## **Fecha de Entrega:**
-
-27/11
+```bash
+  GET http://localhost:4004/api-doc
+  Content-Type: application/json
+```
+## Tecnologías Utilizadas
+- Node.js: Entorno de ejecución de JavaScript.
+- Express: Framework web para Node.js.
+- Sequelize: ORM para gestionar la base de datos MySQL.
+- Swagger: Documentación interactiva para la API.
+- Axios: Cliente HTTP para realizar solicitudes externas.
+- Morgan: Middleware para el registro de solicitudes HTTP.

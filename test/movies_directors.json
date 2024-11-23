@@ -1,0 +1,166 @@
+{
+  "movies_directors": [
+    {
+      "idDirector": 1,
+      "idMovie": 1,
+      "createdAt": "2023-11-30 22:03:24",
+      "updatedAt": "2024-01-01 10:00:00"
+    },
+    {
+      "idDirector": 2,
+      "idMovie": 1,
+      "createdAt": "2023-11-30 22:03:24",
+      "updatedAt": "2024-02-01 10:00:00"
+    },
+    {
+      "idDirector": 3,
+      "idMovie": 2,
+      "createdAt": "2024-02-01 08:30:00",
+      "updatedAt": "2024-02-21 14:00:00"
+    },
+    {
+      "idDirector": 4,
+      "idMovie": 2,
+      "createdAt": "2024-02-01 08:30:00",
+      "updatedAt": "2024-02-21 14:00:00"
+    },
+    {
+      "idDirector": 2,
+      "idMovie": 3,
+      "createdAt": "2024-03-01 09:10:12",
+      "updatedAt": "2024-03-15 12:20:34"
+    },
+    {
+      "idDirector": 5,
+      "idMovie": 4,
+      "createdAt": "2024-04-05 10:20:45",
+      "updatedAt": "2024-04-15 11:45:00"
+    },
+    {
+      "idDirector": 6,
+      "idMovie": 5,
+      "createdAt": "2024-04-10 12:30:50",
+      "updatedAt": "2024-05-01 15:10:10"
+    },
+    {
+      "idDirector": 7,
+      "idMovie": 6,
+      "createdAt": "2024-06-20 10:40:00",
+      "updatedAt": "2024-06-30 13:50:00"
+    },
+    {
+      "idDirector": 8,
+      "idMovie": 7,
+      "createdAt": "2024-07-10 15:12:00",
+      "updatedAt": "2024-07-20 18:30:00"
+    },
+    {
+      "idDirector": 9,
+      "idMovie": 8,
+      "createdAt": "2024-07-15 09:45:00",
+      "updatedAt": "2024-07-25 10:25:00"
+    },
+    {
+      "idDirector": 10,
+      "idMovie": 9,
+      "createdAt": "2024-08-01 14:05:00",
+      "updatedAt": "2024-08-10 17:20:00"
+    },
+    {
+      "idDirector": 11,
+      "idMovie": 10,
+      "createdAt": "2024-09-05 12:20:00",
+      "updatedAt": "2024-09-12 16:30:00"
+    },
+    {
+      "idDirector": 12,
+      "idMovie": 11,
+      "createdAt": "2024-10-01 13:55:00",
+      "updatedAt": "2024-10-15 11:00:00"
+    },
+    {
+      "idDirector": 13,
+      "idMovie": 12,
+      "createdAt": "2024-10-10 08:30:00",
+      "updatedAt": "2024-10-20 19:00:00"
+    },
+    {
+      "idDirector": 14,
+      "idMovie": 13,
+      "createdAt": "2024-11-01 10:00:00",
+      "updatedAt": "2024-11-10 15:10:00"
+    },
+    {
+      "idDirector": 15,
+      "idMovie": 14,
+      "createdAt": "2024-11-05 14:30:00",
+      "updatedAt": "2024-11-12 13:00:00"
+    },
+    {
+      "idDirector": 16,
+      "idMovie": 15,
+      "createdAt": "2024-11-05 16:00:00",
+      "updatedAt": "2024-11-15 14:10:00"
+    },
+    {
+      "idDirector": 17,
+      "idMovie": 16,
+      "createdAt": "2024-10-20 11:40:00",
+      "updatedAt": "2024-11-01 12:50:00"
+    },
+    {
+      "idDirector": 18,
+      "idMovie": 17,
+      "createdAt": "2024-09-28 17:20:00",
+      "updatedAt": "2024-10-10 18:30:00"
+    },
+    {
+      "idDirector": 19,
+      "idMovie": 18,
+      "createdAt": "2024-08-05 14:00:00",
+      "updatedAt": "2024-09-01 16:00:00"
+    },
+    {
+      "idDirector": 20,
+      "idMovie": 19,
+      "createdAt": "2024-07-15 10:00:00",
+      "updatedAt": "2024-07-30 12:00:00"
+    },
+    {
+      "idDirector": 21,
+      "idMovie": 20,
+      "createdAt": "2024-06-12 11:40:00",
+      "updatedAt": "2024-06-25 13:30:00"
+    },
+    {
+      "idDirector": 22,
+      "idMovie": 21,
+      "createdAt": "2024-06-01 16:00:00",
+      "updatedAt": "2024-06-10 19:10:00"
+    },
+    {
+      "idDirector": 23,
+      "idMovie": 22,
+      "createdAt": "2024-05-01 09:25:00",
+      "updatedAt": "2024-05-15 10:15:00"
+    },
+    {
+      "idDirector": 24,
+      "idMovie": 23,
+      "createdAt": "2024-04-15 13:45:00",
+      "updatedAt": "2024-04-25 17:00:00"
+    },
+    {
+      "idDirector": 25,
+      "idMovie": 24,
+      "createdAt": "2024-03-25 10:05:00",
+      "updatedAt": "2024-04-05 14:30:00"
+    },
+    {
+      "idDirector": 1,
+      "idMovie": 25,
+      "createdAt": "2024-01-15 08:40:00",
+      "updatedAt": "2024-02-10 12:50:00"
+    }
+  ]
+}
