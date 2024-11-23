@@ -1,0 +1,229 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Rabid Grannies (Mémés cannibales, Les)",
+      "genre": "Comedy|Horror",
+      "createdAt": "2024-01-19 16:45:00",
+      "updatedAt": "2024-05-13 07:42:34",
+      "released": 2019,
+      "status": "inactive"
+    },
+    {
+      "id": 2,
+      "title": "Casanova",
+      "genre": "Comedy|Drama|Romance",
+      "createdAt": "2024-06-20 06:45:27",
+      "updatedAt": "2024-03-31 04:27:13",
+      "released": 2005,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "title": "Once Upon a Time in China and America (Wong Fei Hung: Chi sai wik hung see)",
+      "genre": "Action|Adventure|Western",
+      "createdAt": "2024-07-23 16:52:19",
+      "updatedAt": "2024-07-25 13:20:26",
+      "released": 2006,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "title": "Where the Truth Lies",
+      "genre": "Drama|Thriller",
+      "createdAt": "2024-07-25 04:02:41",
+      "updatedAt": "2024-09-09 16:35:28",
+      "released": 2006,
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "title": "Paris Blues",
+      "genre": "Drama|Romance",
+      "createdAt": "2023-11-26 01:41:35",
+      "updatedAt": "2024-06-30 23:08:48",
+      "released": 0,
+      "status": "inactive"
+    },
+    {
+      "id": 6,
+      "title": "Dark Angel: Ascent, The",
+      "genre": "Horror|Romance",
+      "createdAt": "2023-12-12 12:31:29",
+      "updatedAt": "2024-01-04 04:19:45",
+      "released": 2013,
+      "status": "inactive"
+    },
+    {
+      "id": 7,
+      "title": "Crying Game, The",
+      "genre": "Drama|Romance|Thriller",
+      "createdAt": "2024-05-01 00:15:33",
+      "updatedAt": "2024-10-13 17:25:56",
+      "released": 2013,
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "title": "Tall Story",
+      "genre": "Comedy",
+      "createdAt": "2023-12-05 10:19:28",
+      "updatedAt": "2024-01-11 06:41:27",
+      "released": 2007,
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "title": "Lemonade Joe (Limonádový Joe aneb Konská opera)",
+      "genre": "Adventure|Comedy|Musical|Romance|Western",
+      "createdAt": "2024-09-08 12:35:12",
+      "updatedAt": "2024-04-22 04:29:36",
+      "released": 2017,
+      "status": "active"
+    },
+    {
+      "id": 10,
+      "title": "And Your Mother Too (Y tu mamá también)",
+      "genre": "Drama|Romance",
+      "createdAt": "2023-12-29 17:19:32",
+      "updatedAt": "2024-03-23 20:01:39",
+      "released": 2010,
+      "status": "inactive"
+    },
+    {
+      "id": 11,
+      "title": "Player's Club, The",
+      "genre": "Comedy|Drama",
+      "createdAt": "2024-08-27 13:57:57",
+      "updatedAt": "2024-11-20 03:18:51",
+      "released": 2007,
+      "status": "active"
+    },
+    {
+      "id": 12,
+      "title": "Jekyll + Hyde",
+      "genre": "Horror|Thriller",
+      "createdAt": "2023-12-23 20:26:00",
+      "updatedAt": "2024-09-11 19:22:54",
+      "released": 2013,
+      "status": "inactive"
+    },
+    {
+      "id": 13,
+      "title": "Home of the Brave",
+      "genre": "Action|Drama|War",
+      "createdAt": "2024-09-23 10:49:50",
+      "updatedAt": "2024-06-09 22:47:02",
+      "released": 2017,
+      "status": "active"
+    },
+    {
+      "id": 14,
+      "title": "Fall From Grace",
+      "genre": "Documentary",
+      "createdAt": "2023-12-04 22:00:46",
+      "updatedAt": "2024-01-09 20:25:37",
+      "released": 2019,
+      "status": "inactive"
+    },
+    {
+      "id": 15,
+      "title": "Monte Carlo",
+      "genre": "Adventure|Comedy|Romance",
+      "createdAt": "2024-01-07 23:31:09",
+      "updatedAt": "2024-04-15 00:37:54",
+      "released": 2018,
+      "status": "inactive"
+    },
+    {
+      "id": 16,
+      "title": "Mannequin 2: On the Move",
+      "genre": "Comedy|Fantasy|Romance",
+      "createdAt": "2024-10-16 04:16:52",
+      "updatedAt": "2024-04-28 13:03:18",
+      "released": 2011,
+      "status": "active"
+    },
+    {
+      "id": 17,
+      "title": "New One-Armed Swordsman, The (Xin du bi dao)",
+      "genre": "Action|Drama|War",
+      "createdAt": "2024-08-18 19:38:31",
+      "updatedAt": "2024-06-13 15:05:17",
+      "released": 2012,
+      "status": "inactive"
+    },
+    {
+      "id": 18,
+      "title": "Every Day",
+      "genre": "Comedy|Drama",
+      "createdAt": "2024-03-06 09:59:00",
+      "updatedAt": "2024-09-26 00:52:59",
+      "released": 2017,
+      "status": "active"
+    },
+    {
+      "id": 19,
+      "title": "Midnight Lace",
+      "genre": "Mystery|Thriller",
+      "createdAt": "2024-04-16 17:02:05",
+      "updatedAt": "2024-11-06 13:42:41",
+      "released": 2011,
+      "status": "active"
+    },
+    {
+      "id": 20,
+      "title": "Personal Effects",
+      "genre": "Drama",
+      "createdAt": "2024-03-23 04:16:03",
+      "updatedAt": "2024-05-23 16:56:59",
+      "released": 2005,
+      "status": "active"
+    },
+    {
+      "id": 21,
+      "title": "Sextette",
+      "genre": "Comedy|Musical|Romance",
+      "createdAt": "2024-08-28 02:05:29",
+      "updatedAt": "2024-01-13 13:28:48",
+      "released": 2012,
+      "status": "active"
+    },
+    {
+      "id": 22,
+      "title": "Lightning Bug",
+      "genre": "Drama|Horror|Thriller",
+      "createdAt": "2024-07-07 11:44:31",
+      "updatedAt": "2024-04-09 19:17:12",
+      "released": 2003,
+      "status": "active"
+    },
+    {
+      "id": 23,
+      "title": "Brother Bear 2",
+      "genre": "Adventure|Animation|Children|Comedy|Fantasy",
+      "createdAt": "2023-12-01 01:57:06",
+      "updatedAt": "2024-06-15 04:54:11",
+      "released": 2011,
+      "status": "inactive"
+    },
+    {
+      "id": 24,
+      "title": "Robinson Crusoe (Daniel Defoe's Robinson Crusoe)",
+      "genre": "Adventure|Drama|Family",
+      "createdAt": "2024-09-06 19:38:53",
+      "updatedAt": "2024-10-14 00:25:22",
+      "released": 2010,
+      "status": "inactive"
+    },
+    {
+      "id": 25,
+      "title": "Great Gabbo, The",
+      "genre": "Drama|Musical",
+      "createdAt": "2024-09-09 17:59:36",
+      "updatedAt": "2024-07-02 06:40:05",
+      "released": 2009,
+      "status": "active"
+    }
+  ]
+}

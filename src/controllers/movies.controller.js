@@ -1,11 +1,12 @@
 const movies = require("../models/movies.model");
 const directors = require("../models/directors.model");
 const errorHandler = require("../helper/errorHandler");
+const { Op } = require("sequelize");
 
 module.exports = {
   read: async (req, res) => {
     try {
-      const { page = 1, limit = 10, sort = "ASC", type, status } = req.query;
+      const { page = 1, limit = 10, sort = "ASC", genre, status } = req.query;
       const pageNumber = parseInt(page, 10);
       const pageLimit = parseInt(limit, 10);
 
@@ -16,8 +17,10 @@ module.exports = {
       ];
 
       const where = {};
-      if (type) {
-        where.genre = type;
+      if (genre) {
+        where.genre = {
+          [Op.like]: `%${genre}%`, 
+        };
       }
       if (status) {
         where.status = status;

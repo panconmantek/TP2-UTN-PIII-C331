@@ -3,7 +3,7 @@ GET http://localhost:4004/movies
 Content-Type: application/json
 
 ### Obtener todas las peliculas con query params
-GET http://localhost:4004/movies?page=2&limit=5&sort=DESC&type=action&status=active
+GET http://localhost:4004/movies?page=2&limit=5&sort=DESC&genre=Drama&status=active
 Content-Type: application/json
 
 #### Obtener 1 película por ID
@@ -15,10 +15,10 @@ POST http://localhost:4004/movies
 Content-Type: application/json
 
 {
-  "title": "Generic movie",
+  "title": "The Exorcist",
   "genre": "Horror",
   "status": "active",
-  "released": 2024,
+  "released": 1973,
   "directorId": 5
 }
 
@@ -27,9 +27,9 @@ PUT http://localhost:4004/movies/19
 Content-Type: application/json
 
 {
-  "title": "Updated Movie Title",
-  "genre": "Comedy|Drama",
-  "directorIds": [1, 7]
+  "title": "Shaun of the Dead",
+  "genre": "Horror|Comedy",
+  "directorIds": [26]
 }
 
 #### Borrar
@@ -41,7 +41,7 @@ GET http://localhost:4004/directors
 Content-Type: application/json
 
 #### Obtener 1 director por ID
-GET http://localhost:4004/directors/1
+GET http://localhost:4004/directors/5
 Content-Type: application/json
 
 #### Crear 1 director
@@ -68,5 +68,9 @@ Content-Type: application/json
 
 #### Borrar
 DELETE http://localhost:4004/directors/12
+Content-Type: application/json
+
+### Obtener documentacion
+GET http://localhost:4004/api-doc
 Content-Type: application/json
 
