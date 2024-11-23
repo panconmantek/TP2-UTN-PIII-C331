@@ -10,6 +10,10 @@ Content-Type: application/json
 GET http://localhost:4004/movies/15
 Content-Type: application/json
 
+#### Buscar una pelicula que no existe
+GET http://localhost:4004/movies/777
+Content-Type: application/json
+
 #### Crear una película
 POST http://localhost:4004/movies
 Content-Type: application/json
